@@ -1,0 +1,26 @@
+[Unit]
+Description=BAKER's distributed currency daemon
+After=network.target
+
+[Service]
+User=baker
+Group=baker
+
+Type=forking
+PIDFile=/var/lib/bakerd/bakerd.pid
+
+ExecStart=/usr/bin/bakerd -daemon -pid=/var/lib/bakerd/bakerd.pid \
+          -conf=/etc/baker/baker.conf -datadir=/var/lib/bakerd
+
+ExecStop=-/usr/bin/baker-cli -conf=/etc/baker/baker.conf \
+         -datadir=/var/lib/bakerd stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

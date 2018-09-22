@@ -1,0 +1,26 @@
+# /etc/conf.d/bakerd: config file for /etc/init.d/bakerd
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/baker/baker.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/bakerd"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/bakerd.pid"
+
+# Where to write bakerd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/bakerd"
+
+# User and group to own bakerd process
+#BITCOIND_USER="baker"
+#BITCOIND_GROUP="baker"
+
+# Path to bakerd executable
+#BITCOIND_BIN="/usr/bin/bakerd"
+
+# Nice value to run bakerd under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""

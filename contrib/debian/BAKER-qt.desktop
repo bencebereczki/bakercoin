@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=BAKER
+Comment=BAKER P2P Cryptocurrency
+Comment[fr]=BAKER, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=BAKER, eşten eşe kriptografik sanal para birimi
+Exec=baker-qt %u
+Terminal=false
+Type=Application
+Icon=baker128
+MimeType=x-scheme-handler/baker;
+Categories=Office;Finance;
